@@ -7,12 +7,98 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+body{
+  width: 1440px;
+    height: 496px;
+}
+.form{
+  display: flex;
+align-items: center;
+justify-content: center;
+  padding: 32px;
+  margin: 0 auto;
+}
+input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-right: 8px;
+  background: #fff;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  outline: none;
+  transition: border-color 250ms ease-in-out;
+
+}
+
+input:focus {
+  border-color: #4e75ff;
+
+}
+
+input::placeholder {
+  color: #808080;}
+
+button{
+  font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+
+    /* line-height: 24px; */
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+    border-radius: 8px;
+      padding: 8px 16px;
+      width: 91px;
+      height: 40px;
+background: #4e75ff;
+}
+button:hover{
+  background: #6c8cff;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+.gallery-item {
+  width: calc(25% - 20px);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.loader {
+  display: block;
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 0.8s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
